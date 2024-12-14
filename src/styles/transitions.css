@@ -1,0 +1,9 @@
+@layer utilities {
+  .transition-all {
+    @apply transition-colors transition-opacity transition-shadow duration-200;
+  }
+  
+  .transition-theme {
+    @apply transition-colors duration-200;
+  }
+}
