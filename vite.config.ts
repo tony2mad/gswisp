@@ -8,6 +8,7 @@ export default defineConfig({
     target: 'esnext',
     minify: 'esbuild',
     assetsDir: 'assets',
+    outDir: 'dist',
     rollupOptions: {
       output: {
         manualChunks: {
@@ -17,8 +18,10 @@ export default defineConfig({
         }
       }
     },
-    assetsInlineLimit: 4096,
-    sourcemap: false,
-    chunkSizeWarningLimit: 1000
+    sourcemap: true,
+    // Osigurava da se generiraju svi potrebni fileovi
+    emptyOutDir: true,
+    // Dodajemo manifest file
+    manifest: true,
   }
 });

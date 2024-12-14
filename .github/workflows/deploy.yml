@@ -28,11 +28,29 @@ jobs:
       - name: Build
         run: npm run build
         
+      - name: List dist directory
+        run: ls -la dist
+        
       - name: Copy index.html to 404.html
-        run: cp dist/index.html dist/404.html
+        run: |
+          cp dist/index.html dist/404.html
+          echo "Content of 404.html:"
+          cat dist/404.html
         
       - name: Create CNAME file
-        run: echo "new.gswisp.net" > dist/CNAME
+        run: |
+          echo "new.gswisp.net" > dist/CNAME
+          echo "Content of CNAME:"
+          cat dist/CNAME
+          
+      - name: Verify dist contents
+        run: |
+          echo "Final dist directory contents:"
+          ls -la dist
+          echo "Checking for critical files:"
+          test -f dist/index.html && echo "✓ index.html exists" || echo "✗ index.html missing"
+          test -f dist/404.html && echo "✓ 404.html exists" || echo "✗ 404.html missing"
+          test -f dist/CNAME && echo "✓ CNAME exists" || echo "✗ CNAME missing"
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
