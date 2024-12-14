@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/', // Promijenili smo base URL jer ćemo koristiti subdomenu
+  base: '/',
   build: {
     target: 'esnext',
     minify: 'esbuild',
