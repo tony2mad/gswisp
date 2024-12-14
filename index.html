@@ -12,19 +12,38 @@
     
     <!-- GitHub Pages SPA redirect -->
     <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
       (function(l) {
         if (l.search[1] === '/') {
           var decoded = l.search.slice(1).split('&').map(function(s) { 
             return s.replace(/~and~/g, '&')
           }).join('?');
           window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
+            l.pathname.slice(0, -1) + decoded + l.hash
           );
         }
       }(window.location))
     </script>
     
-    <!-- Rest of your meta tags remain the same -->
+    <!-- Keywords -->
+    <meta name="keywords" content="internet gospić, optički internet gospić, bežični internet gospić, gswisp, internet provider gospić, brzi internet gospić, internet bez ugovorne obveze, optička mreža gospić, internet za zgrade gospić, najbolji internet gospić">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://new.gswisp.net/">
+    <meta property="og:title" content="GSWISP Internet | Brzi Internet u Gospiću | Optički i Bežični Internet">
+    <meta property="og:description" content="GSWISP pruža brzi optički i bežični internet u Gospiću i okolici. Bez ugovorne obveze, besplatna instalacija, brzine do 200 Mbps. Domaći internet provider s 11 godina iskustva.">
+    <meta property="og:image" content="https://new.gswisp.net/og-image.jpg">
+    <meta property="og:locale" content="hr_HR">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://new.gswisp.net/">
+    <meta property="twitter:title" content="GSWISP Internet | Brzi Internet u Gospiću">
+    <meta property="twitter:description" content="GSWISP pruža brzi optički i bežični internet u Gospiću i okolici. Bez ugovorne obveze, besplatna instalacija, brzine do 200 Mbps.">
+    <meta property="twitter:image" content="https://new.gswisp.net/twitter-image.jpg">
   </head>
   <body>
     <div id="root"></div>

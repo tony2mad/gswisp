@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/gswisp-website/', // Add this line for GitHub Pages
+  base: '/',
   build: {
     target: 'esnext',
     minify: 'esbuild',
